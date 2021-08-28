@@ -54,7 +54,7 @@ export class Ball {
             const minDistY = distMinY < distMaxY ? distMinY : distMaxY
 
 
-            if (minDistX <= minDistY) {
+            if (minDistX < minDistY) {
                 this.vx *= -1
                 this.x += this.vx
             } else {

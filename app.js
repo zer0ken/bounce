@@ -15,7 +15,6 @@ class App {
         document.body.appendChild(this.canvas)
 
         window.addEventListener('resize', this.resize.bind(this), false)
-        window.addEventListener('scroll', this.scroll.bind(this), false)
         this.resize()
 
         this.block = new Block(this.stageWidth / 3, 40, this.stageWidth / 4, this.stageHeight * 3 / 10)
@@ -32,7 +31,7 @@ class App {
         this.canvas.height = this.stageHeight * this.pixelRatio
         this.ctx.scale(this.pixelRatio, this.pixelRatio)
 
-        this.block = new Block(this.stageWidth / 3, 80, this.stageWidth / 4, this.stageHeight * 3 / 10)
+        this.block = new Block(this.stageWidth / 3, 80, this.stageWidth / 4, this.stageHeight * 3 / 100)
     }
 
     animate(t) {
@@ -42,10 +41,6 @@ class App {
 
         this.block.draw(this.ctx)
         this.ball.draw(this.ctx, this.stageWidth, this.stageHeight, this.block)
-    }
-
-    scroll(e) {
-        console.log(e.deltaY)
     }
 }
 
