@@ -31,7 +31,7 @@ class App {
         this.canvas.height = this.stageHeight * this.pixelRatio
         this.ctx.scale(this.pixelRatio, this.pixelRatio)
 
-        this.block = new Block(this.stageWidth / 3, 80, this.stageWidth / 4, this.stageHeight * 3 / 100)
+        this.block = new Block(this.stageWidth / 3, 40, this.stageWidth / 4, this.stageHeight * 3 / 10)
     }
 
     animate(t) {
