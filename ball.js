@@ -50,21 +50,16 @@ export class Ball {
             const distMinY = Math.abs(minY - this.y)
             const distMaxY = Math.abs(maxY - this.y)
 
-            const minDistX = distMinX > distMaxX ? distMinX : distMaxX
-            const minDistY = distMinY > distMaxY ? distMinY : distMaxY
+            const minDistX = distMinX < distMaxX ? distMinX : distMaxX
+            const minDistY = distMinY < distMaxY ? distMinY : distMaxY
 
 
-            if (minDistX < minDistY) {
+            if (minDistX <= minDistY) {
                 this.vx *= -1
                 this.x += this.vx
-            } else if (minDistX > minDistY) {
-                this.vy *= -1
-                this.y += this.vy
             } else {
                 this.vy *= -1
                 this.y += this.vy
-                this.vx *= -1
-                this.x += this.vx
             }
         }
     }

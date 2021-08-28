@@ -18,8 +18,8 @@ class App {
         window.addEventListener('scroll', this.scroll.bind(this), false)
         this.resize()
 
-        this.block = new Block(this.stageWidth / 3, 160, this.stageWidth / 4, this.stageHeight * 3 / 10)
-        this.ball = new Ball(this.stageWidth, this.stageHeight, 40, 15)
+        this.block = new Block(this.stageWidth / 3, 40, this.stageWidth / 4, this.stageHeight * 3 / 10)
+        this.ball = new Ball(this.stageWidth, this.stageHeight, 40, 8)
 
         window.requestAnimationFrame(this.animate.bind(this))
     }
