@@ -10,7 +10,7 @@ class App {
     constructor() {
         this.canvas = document.createElement('canvas')
         this.ctx = this.canvas.getContext('2d')
-        this.pixelRatio = document.pixelRatio > 1 ? 2 : 1
+        this.pixelRatio = document.devicePixelRatio > 1 ? 2 : 1
 
         document.body.appendChild(this.canvas)
 
